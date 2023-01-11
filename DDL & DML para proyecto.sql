@@ -10,8 +10,8 @@ CREATE TABLE requirement (
   id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   description VARCHAR(280) NOT NULL,
   status BOOLEAN DEFAULT FALSE,
-  id_type INT(6),
-  id_project INT(6),
+  id_type INT(6) UNSIGNED,
+  id_project INT(6) UNSIGNED,
   FOREIGN KEY(id_type) REFERENCES type_requirement(id),
   FOREIGN KEY(id_project) REFERENCES project(id)
 )
